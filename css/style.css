@@ -35,7 +35,7 @@ img {
   display: block;
 }
 .container {
-  width: 1158px;
+  width: 320px;
   display: flex;
   margin: 0 auto;
   padding: 0 15px;
@@ -134,7 +134,8 @@ a.nav-list-item {
 .adress-list {
   display: flex;
   justify-content: flex-end;
-  gap: 40px;
+  flex-direction: column;
+  gap: 12px;
 }
 .adress-item .adress-link {
   font-size: 16px;
@@ -144,7 +145,6 @@ a.nav-list-item {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--slate);
-  padding: 24px 0;
   display: block;
 }
 
@@ -228,6 +228,8 @@ a.nav-list-item {
 .section-second-list {
   display: flex;
   gap: 24px;
+  flex-direction: column;
+  align-items: center;
 }
 .section-second-list-item {
   font-style: normal;
@@ -238,6 +240,7 @@ a.nav-list-item {
   max-width: 264px;
 }
 .section-h-third {
+  text-align: center;
   color: var(--navyblue);
   font-size: 20px;
   font-weight: 500;
@@ -288,6 +291,7 @@ a.nav-list-item {
   display: flex;
   gap: 24px;
   justify-content: center;
+  flex-direction: column;
 }
 .section-third .list-item {
   background: #fff;
@@ -341,6 +345,7 @@ a.employee-link:focus {
 }
 .section-fourth-list {
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
   column-gap: 24px;
   row-gap: 48px;
@@ -413,13 +418,18 @@ a.employee-link:focus {
 .footer .container {
   display: flex;
   justify-content: center;
-  align-items: baseline;
+  align-items: center;
+  flex-direction: column;
+  gap: 72px;
 }
 .footer-text {
   max-width: 264px;
 }
-.description {
-  margin-right: 120px;
+.description .logo {
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 17.5px;
 }
 .footer-list {
   display: flex;
@@ -454,13 +464,19 @@ a.footer-link:focus {
   margin-bottom: 16px;
   font-weight: 500;
   letter-spacing: 0.02em;
+  text-align: center;
+  display: block;
 }
-.sub-footer {
-  margin-left: 80px;
-}
+
 .form-sub {
   display: flex;
   gap: 24px;
+  flex-direction: column;
+  align-items: center;
+}
+.sub-footer {
+  display: flex;
+  flex-direction: column;
 }
 .email-input-sub {
   width: 264px;
@@ -479,7 +495,7 @@ a.footer-link:focus {
   color: #fff;
 }
 .sub-btn-sbmt {
-  min-width: 165px;
+  width: 165px;
   height: 40px;
   display: flex;
   justify-content: center;
@@ -703,11 +719,12 @@ input:checked .checkbox-span {
   .container {
     width: 768px;
   }
-
+  .section-h-third {
+    text-align: left;
+  }
   .section-second-list,
   .section-third-list,
-  .section-fourth-list,
-  .footer .container {
+  .section-fourth-list {
     flex-direction: row;
     flex-wrap: wrap;
     gap: 24px;
@@ -719,11 +736,32 @@ input:checked .checkbox-span {
   .section-fourth-list .list-item {
     flex-basis: calc((100% - 24px) / 2);
   }
+  .footer .container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: center;
+    align-items: baseline;
+  }
+  .form-sub {
+    flex-direction: row;
+  }
+
+  .description .logo,
+  .ftr-media {
+    text-align: left;
+  }
 }
 @media (min-width: 1158px) {
   .container {
     width: 1158px;
   }
+
+  .adress-list {
+    flex-direction: row;
+    gap: 40px;
+  }
+
   .section-second-list-item-icon {
     opacity: 1;
     visibility: visible;
@@ -744,7 +782,14 @@ input:checked .checkbox-span {
   .section-fourth-list .list-item {
     flex-basis: calc((100% - 48px) / 3);
   }
+
   .footer .container {
-    flex-wrap: nowrap;
+    gap: 0;
+  }
+  .description {
+    margin-right: 120px;
+  }
+  .sub-footer {
+    margin-left: 80px;
   }
 }
