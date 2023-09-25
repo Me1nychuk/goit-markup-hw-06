@@ -268,7 +268,9 @@ a.nav-list-item {
   border: 1px solid var(--light-slate);
   margin-bottom: 8px;
 }
+
 /* section_03  */
+
 .section-third {
   background: var(--light);
   text-align: center;
@@ -292,6 +294,9 @@ a.nav-list-item {
   gap: 24px;
   justify-content: center;
   flex-direction: column;
+}
+.section-third-list .section-h-third {
+  text-align: center;
 }
 .section-third .list-item {
   background: #fff;
